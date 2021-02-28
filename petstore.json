@@ -22,6 +22,7 @@
     ],
     "paths": {
         "/pets": {
+            "summary": "Pet store API",
             "get": {
                 "parameters": [
                     {
@@ -99,6 +100,12 @@
                         "description": "pet response"
                     }
                 },
+                "security": [
+                    {
+                        "apikey-sec": [
+                        ]
+                    }
+                ],
                 "operationId": "findPets",
                 "description": "Returns all pets from the system that the user has access to\n"
             },
@@ -158,6 +165,7 @@
             }
         },
         "/pets/{id}": {
+            "summary": "pet store api",
             "get": {
                 "parameters": [
                     {
@@ -207,6 +215,12 @@
                         "description": "pet response"
                     }
                 },
+                "security": [
+                    {
+                        "apikey-sec": [
+                        ]
+                    }
+                ],
                 "operationId": "findPetById",
                 "description": "Returns a user based on a single ID, if the user does not have\naccess to the pet"
             },
@@ -307,6 +321,19 @@
                     }
                 }
             }
+        },
+        "securitySchemes": {
+            "apikey-sec": {
+                "type": "apiKey",
+                "name": "api-key",
+                "in": "query"
+            }
         }
-    }
+    },
+    "security": [
+        {
+            "apikey-sec": [
+            ]
+        }
+    ]
 }
