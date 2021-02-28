@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.1",
     "info": {
-        "title": "LocationsV1",
+        "title": "Locations",
         "version": "1.0.0",
         "description": "Locations API"
     },
@@ -177,6 +177,5 @@
                 "example": "{\n  \"id\": 1,\n  \"name\": \"Kamarhati\",\n  \"type\": \"Regional Branch\",\n  \"status\": \"1\",\n  \"location\": {\n    \"lat\": \"-28.32555\",\n    \"lng\": \"-5.91531\"\n  }\n}"
             }
         }
-    },
-    "swagger": "2.0"
+    }
 }
